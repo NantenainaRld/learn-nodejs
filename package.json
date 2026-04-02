@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/NantenainaRld/learn-nodejs/issues"
   },
-  "homepage": "https://github.com/NantenainaRld/learn-nodejs#readme",
-  "dependencies": {
-    "mathjs": "^15.1.1"
-  }
+  "homepage": "https://github.com/NantenainaRld/learn-nodejs#readme"
 }

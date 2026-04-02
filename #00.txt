@@ -90,3 +90,9 @@
     - Install module ``` npm i module_name ```:
         ``` npm i mathjs ```
         - example in index.js
+========================================
+
+========================================
+# 03
+# Uninstall module ``` npm uninstall module_name ``` :
+    ``` npm uninstall mathjs ```
