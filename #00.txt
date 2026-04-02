@@ -140,6 +140,34 @@
                  npm i --save module_name
                  ```
 ========================================
-        
 
+========================================
+# 04 - JSON 
+
+# JSON to object : use `JSON.parse(fs.readFileSync())`
+    - example in index.js:
+        ```javascript
+        const data = JSON.parse(fs.readFileSync("./data.json", "utf8"));
+        ```
+
+# Object to JSON : use `JSON.stringify(object)`
+    - example in index.js:
+        ```javascript
+        const jsonString = JSON.stringify(myObject);
+        ```
+
+# Create a JSON file : use `fs.writeFileSync("./newData.json", JSON.stringify(object))`
+    - example in index.js:
+        ```javascript
+        fs.writeFileSync("./newData.json", JSON.stringify(myObject, null, 2));
+        ```
+
+# Update JSON : read -> parse -> update object -> stringify -> write
+    - example in index.js:
+        ```javascript
+        const content = JSON.parse(fs.readFileSync("./data.json", "utf8"));
+        content.name = "New Name";
+        fs.writeFileSync("./data.json", JSON.stringify(content, null, 2));
+        ```
+========================================
     
