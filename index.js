@@ -30,3 +30,12 @@
 
 // console.log(chain(5).add(2).divide(3).multiply(4).done()); // ((5 + 2) / 2) * 4 = 9.3333
 // =================================
+
+// =================================
+// # 03 - Module
+
+//-- Chalk
+// import chalk from "chalk";
+// console.log(chalk.bgRed("Red background"));
+// console.log(chalk.green.bold.bgBlue("Text green, bold, background blue"));
+// console.log(chalk.yellow.underline("Underline , text yellow"));

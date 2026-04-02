@@ -62,37 +62,84 @@
 # 02 - Import/export module :
 
     - We have 2 methods :
-        - CommonJS - Can present away in the code (without .js):
-            `require("./module")`
+        - CommonJS - Can be present anywhere in the code (without .js):
+            `const module = require("./module")`
             `module.exports = {function00, function01}`
 
-        - ES6 - Must in the top/bottom of the code (with .js):
+        - ES6 - Must be at the top of the code (requires .js extension):
             `import function01 from "./module.js"` (import default)
             `import object2 from "./module.js"` (import default object)
-            `import { function00, function01 } from "./modulejs."` (import named object)
+            `import { function00, function01 } from "./module.js"` (import named object)
             `export default function00;` (default export)
             `export default {
                 function00,
                 function01
-            }
-            ` ( export default for object)
+            }` (export default for object)
             `export {
                 function00,
                 function01
-            }
-            ` ( export named object)
+            }` (export named object)
 
         - let's create a file `module.js`
-        - Note : in the recent version of node , you have to init the folder to have the package.json and manipulate the type to "commonJS" or "module" "
-            ``` npm init -y ``` (Default)
-            ``` npm init ``` (with configuration)
+        - Note : in the recent version of node , you have to init the folder to have the package.json and manipulate the type to "commonjs" or "module"
+            ```bash
+            npm init -y
+            ``` (Default)
+            ```bash
+            npm init
+            ``` (with configuration)
 
-    - Install module ``` npm i module_name ```:
-        ``` npm i mathjs ```
+    - Install module `npm i module_name`:
+        ```bash
+        npm i mathjs
+        ```
         - example in index.js
 ========================================
 
 ========================================
-# 03
-# Uninstall module ``` npm uninstall module_name ``` :
-    ``` npm uninstall mathjs ```
+# 03 - Module
+
+# module != dependency :
+    - module : a block of code like `your_file.js`
+    - dependency : an external module that is listed in the `package.json`
+
+# Uninstall module `npm uninstall module_name` :
+    ```bash
+    npm uninstall mathjs
+    ```
+
+# Type of modules :
+    - global (installed to the system folder, and can be used everywhere in the path) : 
+        ```bash
+        npm i -g module_name
+        ```
+        - example :
+            ```bash
+            npm i -g nodemon
+            ``` (refresh file when changed)
+            -> ```bash
+               nodemon index.js
+               ```
+
+    - dev (for development only, ignored for build) : 
+        ```bash
+        npm i -D module_name
+        ``` or ```bash
+                 npm i --save-dev module_name
+                 ```
+        - example :
+            ```bash
+            npm i -D chalk
+            ``` (to change terminal color)
+            - example in index.js
+
+    - prod (for project) :
+        ```bash
+        npm i module_name
+        ``` or ```bash
+                 npm i --save module_name
+                 ```
+========================================
+        
+
+    
