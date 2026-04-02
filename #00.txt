@@ -58,4 +58,35 @@
         - `readFileSync` requires an encoding (like "utf8") to return a string instead of a Buffer.
 ===============================================
 
-# 02 
+===============================================
+# 02 - Import/export module :
+
+    - We have 2 methods :
+        - CommonJS - Can present away in the code (without .js):
+            `require("./module")`
+            `module.exports = {function00, function01}`
+
+        - ES6 - Must in the top/bottom of the code (with .js):
+            `import function01 from "./module.js"` (import default)
+            `import object2 from "./module.js"` (import default object)
+            `import { function00, function01 } from "./modulejs."` (import named object)
+            `export default function00;` (default export)
+            `export default {
+                function00,
+                function01
+            }
+            ` ( export default for object)
+            `export {
+                function00,
+                function01
+            }
+            ` ( export named object)
+
+        - let's create a file `module.js`
+        - Note : in the recent version of node , you have to init the folder to have the package.json and manipulate the type to "commonJS" or "module" "
+            ``` npm init -y ``` (Default)
+            ``` npm init ``` (with configuration)
+
+    - Install module ``` npm i module_name ```:
+        ``` npm i mathjs ```
+        - example in index.js
