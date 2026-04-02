@@ -2,19 +2,60 @@
 
 # Prerequisites:
 
-- Install the Node.js runtime (LTS version recommended).
-- Verify the installation in your terminal:
-    - Check Node.js version: 
-        ```bash
-        node -v
-        ```
-    - Check NPM (Node Package Manager) version: 
-        ```bash
-        npm -v
-        ```
-
+    - Install the Node.js runtime (LTS version recommended).
+    - Verify the installation in your terminal:
+        - Check Node.js version: 
+            ```bash
+            node -v
+            ```
+        - Check NPM (Node Package Manager) version: 
+            ```bash
+            npm -v
+            ```
+=================================================
 # 00 - Introduction:
 
-- Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
-- It allows you to run JavaScript on the server-side (outside the browser).
-- Asynchronous and Event-Driven: Node.js uses a non-blocking I/O model that makes it lightweight and efficient.
+    - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+    - It allows you to run JavaScript on the server-side (outside the browser).
+    - Asynchronous and Event-Driven: Node.js uses a non-blocking I/O model that makes it lightweight and efficient.
+=================================================
+
+=================================================
+# 01 - First script
+
+    - Create an `index.js` file:
+        ```javascript
+        console.log("Hello World!");
+        ```
+    - Run the script in your terminal:
+        ```bash
+        node index.js
+        ```
+
+    - File System (fs):
+        - To manipulate the file system, you must import the `fs` module:
+            ```javascript
+            const fs = require("fs");
+            ```
+
+    - Create or write to a file (Synchronous):
+        - Syntax: `fs.writeFileSync(path, data)`
+        - Example:
+            ```javascript
+            fs.writeFileSync("test01.txt", "This is the content for writeFileSync");
+            ```
+
+    - Read a file's content (Synchronous):
+        - Syntax: `fs.readFileSync(path, encoding)`
+        - Example:
+            ```javascript
+            const content = fs.readFileSync("test01.txt", "utf8");
+            console.log(content);
+            ```
+
+    - Note: 
+        - `writeFileSync` overwrites the file if it already exists.
+        - `readFileSync` requires an encoding (like "utf8") to return a string instead of a Buffer.
+===============================================
+
+# 02 
