@@ -184,4 +184,14 @@
 =========================================
 
 =========================================
+# 06 - ExpressJS
+# Install : ```npm i express```
+# Example in `express.js`
+
+# EJS :
+    - javascript server-side 
+    - install : ```npm i ejs```
+    - you must create the folder `views` and the view must in this folder with the extension .ejs
+    - example in `express.js`
+=========================================
     

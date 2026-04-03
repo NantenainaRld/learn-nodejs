@@ -15,9 +15,19 @@ import "dotenv/config";
 import express from "express";
 
 const app = express();
+app.use(express.json());
 
-app.get("/status", (req, res) => {
-  res.json({ status: "online", server: "8888888-Clinic" });
+app.post("/apointment", (req, res) => {
+  const { patient, date } = req.body || {};
+  // missing data
+  if (!patient || !date) {
+    return res.status(400).json({ error: "Missing data" });
+  }
+
+  res.status(201).json({
+    message: `Apointment created for ${patient}`,
+    id: "8888888",
+  });
 });
 
 app.listen(process.env.PORT);
