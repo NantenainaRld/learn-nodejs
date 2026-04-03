@@ -170,4 +170,18 @@
         fs.writeFileSync("./data.json", JSON.stringify(content, null, 2));
         ```
 ========================================
+
+========================================
+# 05 - Server
+
+# First server
+    - create our first server :
+        example in the `server.js`
+
+# Server with page :
+    - create `index.html`
+    - call it in server.js
+=========================================
+
+=========================================
     
