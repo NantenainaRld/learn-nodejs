@@ -7,6 +7,6 @@ const payload = {
   userName: "Nantenaina",
 };
 
-const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "120" });
+const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "5m" });
 
 console.log(token);
