@@ -5,6 +5,7 @@ export const validateUser = (req, res, next) => {
     userName: Joi.string().alphanum().min(3).required(),
     email: Joi.string().email().required(),
     age: Joi.number().min(18).required(),
+    password: Joi.string.min(6).required(),
   });
 
   const { error } = schema.validate(req.body);
